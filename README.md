@@ -1,2 +1,2 @@
-# semi_supervised_em_algorithm
+# Semi-Supervised Clustering Models
 Tools for Gaussian Mixture Models with Partially Labelled Data
