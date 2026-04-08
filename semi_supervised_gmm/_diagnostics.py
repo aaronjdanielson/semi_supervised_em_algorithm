@@ -120,7 +120,11 @@ def _analytic_fisher_mu(
     F_mu = np.zeros((2 * d, 2 * d))
     F_mu[:d, :d]   = F1
     F_mu[d:, d:]   = F0
-    return F_mu + 1e-6 * np.eye(2 * d)
+
+    # Adaptive ridge: scale with degree of rank deficiency.
+    # When N1 >= d and N0 >= d (normal case), reg_scale = 1 and behavior is unchanged.
+    reg_scale = max(d / N1, d / N0, 1.0)
+    return F_mu + reg_scale * eps_cov * np.eye(2 * d)
 
 
 def _val_gradient_mu(
@@ -189,13 +193,18 @@ def alignment_A0(
     F_mu = _analytic_fisher_mu(X_pos, X_neg, params, eps_cov=eps_cov)
     gv_mu = _val_gradient_mu(X_pos_val, X_neg_val, params, eps_cov=eps_cov)
 
-    try:
-        from scipy.linalg import solve
-        F_inv_g0 = solve(F_mu, g0_mu)
-    except Exception:
-        F_inv_g0 = np.linalg.lstsq(F_mu, g0_mu, rcond=None)[0]
+    # Use lstsq for robustness when F_mu is near-singular (handles rank deficiency via SVD).
+    # rcond=1e-4 treats singular values < 1e-4 * max_sv as zero, catching ill-conditioned
+    # matrices that arise when N1 or N0 < d (rank-deficient scatter matrices).
+    F_inv_g0, _, rank, _ = np.linalg.lstsq(F_mu, g0_mu, rcond=1e-4)
+    if rank < F_mu.shape[0]:
+        A0 = float("nan")   # Fisher is rank-deficient; diagnostic unreliable
+    else:
+        A0 = float(F_inv_g0 @ gv_mu)
 
-    A0 = float(F_inv_g0 @ gv_mu)
+    if not np.isfinite(A0):
+        A0 = float("nan")
+
     return A0, g0_norm
 
 
@@ -242,7 +251,9 @@ def alignment_score(
 
     A0, g0_norm = alignment_A0(X_pos, X_neg, X_u, X_pos_val, X_neg_val, eps_cov=eps_cov)
 
-    if g0_norm > g0_norm_threshold:
+    rank_deficient = not np.isfinite(A0)
+
+    if not np.isfinite(g0_norm) or g0_norm > g0_norm_threshold or rank_deficient:
         recommendation = "unreliable"
     elif A0 > 0:
         recommendation = "use"
@@ -254,4 +265,5 @@ def alignment_score(
         "g0_norm": g0_norm,
         "recommendation": recommendation,
         "n_unlabeled": X_u.shape[0],
+        "rank_deficient": rank_deficient,
     }
