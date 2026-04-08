@@ -83,11 +83,11 @@ auc    = model.score(X_test, y_test)   # AUROC
 
 ## Results
 
-![AUROC vs label budget](assets/auroc_vs_nlabeled.png)
+![AUROC vs label budget](https://raw.githubusercontent.com/aaronjdanielson/semi_supervised_gmm/main/assets/auroc_vs_nlabeled.png)
 
-![Effect of λ on AUROC](assets/lambda_sweep.png)
+![Effect of λ on AUROC](https://raw.githubusercontent.com/aaronjdanielson/semi_supervised_gmm/main/assets/lambda_sweep.png)
 
-![Cross-dataset benchmark](assets/benchmark_delta_auroc.png)
+![Cross-dataset benchmark](https://raw.githubusercontent.com/aaronjdanielson/semi_supervised_gmm/main/assets/benchmark_delta_auroc.png)
 
 ## Benchmark results
 

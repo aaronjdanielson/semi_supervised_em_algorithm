@@ -47,9 +47,9 @@ examples = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/the-authors/semi-supervised-gmm"
-Documentation = "https://github.com/the-authors/semi-supervised-gmm#readme"
-"Bug Tracker" = "https://github.com/the-authors/semi-supervised-gmm/issues"
+Homepage = "https://github.com/aaronjdanielson/semi_supervised_gmm"
+Documentation = "https://github.com/aaronjdanielson/semi_supervised_gmm#readme"
+"Bug Tracker" = "https://github.com/aaronjdanielson/semi_supervised_gmm/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
