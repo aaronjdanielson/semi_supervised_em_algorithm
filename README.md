@@ -81,6 +81,14 @@ auc    = model.score(X_test, y_test)   # AUROC
 
 ---
 
+## Results
+
+![AUROC vs label budget](assets/auroc_vs_nlabeled.png)
+
+![Effect of λ on AUROC](assets/lambda_sweep.png)
+
+![Cross-dataset benchmark](assets/benchmark_delta_auroc.png)
+
 ## Benchmark results
 
 AUROC averaged over 10 random seeds ± std. `covariance_type="ledoit_wolf"`, StandardScaler.  
