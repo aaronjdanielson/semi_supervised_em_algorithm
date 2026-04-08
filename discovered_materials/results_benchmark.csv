@@ -1,0 +1,57 @@
+dataset,d,N,N_lab,model,auroc_mean,auroc_std,n_seeds
+Breast Cancer,30,569,20,supervised,0.93556,0.01038,10
+Breast Cancer,30,569,20,lam=0.1,0.97350,0.01877,10
+Breast Cancer,30,569,20,lam=1.0,0.95925,0.03701,10
+Breast Cancer,30,569,20,lam=5.0,0.95619,0.04074,10
+Breast Cancer,30,569,40,supervised,0.87963,0.05440,10
+Breast Cancer,30,569,40,lam=0.1,0.97150,0.02356,10
+Breast Cancer,30,569,40,lam=1.0,0.97144,0.01845,10
+Breast Cancer,30,569,40,lam=5.0,0.96988,0.01948,10
+Breast Cancer,30,569,80,supervised,0.96919,0.01831,10
+Breast Cancer,30,569,80,lam=0.1,0.97881,0.02103,10
+Breast Cancer,30,569,80,lam=1.0,0.97581,0.02460,10
+Breast Cancer,30,569,80,lam=5.0,0.97188,0.02918,10
+Ionosphere,34,351,20,supervised,0.92955,0.00473,10
+Ionosphere,34,351,20,lam=0.1,0.93649,0.03479,10
+Ionosphere,34,351,20,lam=1.0,0.94857,0.02815,10
+Ionosphere,34,351,20,lam=5.0,0.94604,0.03036,10
+Ionosphere,34,351,40,supervised,0.93559,0.01490,10
+Ionosphere,34,351,40,lam=0.1,0.95420,0.04098,10
+Ionosphere,34,351,40,lam=1.0,0.94416,0.02874,10
+Ionosphere,34,351,40,lam=5.0,0.94441,0.02431,10
+Ionosphere,34,351,80,supervised,0.81682,0.11425,10
+Ionosphere,34,351,80,lam=0.1,0.95682,0.02214,10
+Ionosphere,34,351,80,lam=1.0,0.96057,0.01795,10
+Ionosphere,34,351,80,lam=5.0,0.95894,0.01901,10
+Sonar,60,208,20,supervised,0.85500,0.00000,10
+Sonar,60,208,20,lam=0.1,0.67850,0.10771,10
+Sonar,60,208,20,lam=1.0,0.70550,0.10514,10
+Sonar,60,208,20,lam=5.0,0.69100,0.11137,10
+Sonar,60,208,40,supervised,0.85500,0.00000,10
+Sonar,60,208,40,lam=0.1,0.74725,0.10055,10
+Sonar,60,208,40,lam=1.0,0.71875,0.06135,10
+Sonar,60,208,40,lam=5.0,0.70175,0.08523,10
+Sonar,60,208,80,supervised,0.86100,0.01085,10
+Sonar,60,208,80,lam=0.1,0.81275,0.09525,10
+Sonar,60,208,80,lam=1.0,0.69725,0.08915,10
+Sonar,60,208,80,lam=5.0,0.70875,0.09726,10
+Heart Disease,13,270,20,supervised,0.90329,0.03797,10
+Heart Disease,13,270,20,lam=0.1,0.75679,0.12826,10
+Heart Disease,13,270,20,lam=1.0,0.74787,0.11035,10
+Heart Disease,13,270,20,lam=5.0,0.76653,0.08363,10
+Heart Disease,13,270,40,supervised,0.75679,0.09216,10
+Heart Disease,13,270,40,lam=0.1,0.81111,0.05506,10
+Heart Disease,13,270,40,lam=1.0,0.88285,0.05112,10
+Heart Disease,13,270,40,lam=5.0,0.88711,0.04835,10
+Heart Disease,13,270,80,supervised,0.83059,0.05559,10
+Heart Disease,13,270,80,lam=0.1,0.84472,0.06074,10
+Heart Disease,13,270,80,lam=1.0,0.87737,0.06629,10
+Heart Disease,13,270,80,lam=5.0,0.85679,0.07631,10
+Parkinsons,22,195,20,supervised,0.82659,0.06170,10
+Parkinsons,22,195,20,lam=0.1,0.80028,0.03041,10
+Parkinsons,22,195,20,lam=1.0,0.78560,0.03368,10
+Parkinsons,22,195,20,lam=5.0,0.76233,0.04048,10
+Parkinsons,22,195,40,supervised,0.85679,0.10371,10
+Parkinsons,22,195,40,lam=0.1,0.83324,0.08588,10
+Parkinsons,22,195,40,lam=1.0,0.78726,0.08990,10
+Parkinsons,22,195,40,lam=5.0,0.75956,0.06611,10

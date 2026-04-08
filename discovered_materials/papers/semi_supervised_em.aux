@@ -1,0 +1,267 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\newlabel{eq:intro-objective}{{1}{2}{Introduction}{equation.1.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Motivating application.}{2}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Contributions.}{2}{section*.2}\protected@file@percent }
+\citation{zhu2005semi}
+\citation{chapelle2006semi}
+\citation{dempster1977maximum,ghahramani1994supervised}
+\citation{laine2016temporal,miyato2018virtual}
+\citation{lee2013pseudo}
+\citation{scudder1965probability}
+\@writefile{toc}{\contentsline {paragraph}{The unifying thread.}{3}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Paper outline.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{3}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Semi-Supervised Learning}{3}{subsection.2.1}\protected@file@percent }
+\citation{ghahramani1994supervised}
+\citation{nigam2000text}
+\citation{nigam2000text}
+\citation{fraley2002model,mcnicholas2016mixture}
+\citation{ganesalingam1978classification}
+\citation{o1978normal}
+\citation{banfield1993model}
+\citation{huang2009semi}
+\citation{huang2009semi}
+\citation{ji2009semisupervised}
+\citation{cozman2002unlabeled}
+\citation{liu2002partially,elkan2008learning}
+\citation{zhou2018brief,ratner2017snorkel}
+\citation{fellegi1969theory,christophides2020overview}
+\citation{larsen2001iterative}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Gaussian Mixture Models, Weighting, and Misspecification}{4}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Closest method-level comparator.}{4}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Closest conceptual comparator.}{4}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Misspecification.}{4}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Positive-Unlabeled and Weakly Supervised Learning}{4}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Entity Matching and Candidate Ranking}{5}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{5}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{5}{Method}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem Setting and Notation}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Weighted Semi-Supervised Objective}{5}{subsection.3.2}\protected@file@percent }
+\newlabel{eq:weighted-ll}{{2}{5}{Weighted Semi-Supervised Objective}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}EM Algorithm}{6}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{E-step.}{6}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{M-step.}{6}{section*.9}\protected@file@percent }
+\newlabel{eq:pi-update}{{3}{6}{M-step}{equation.3.3}{}}
+\newlabel{eq:mu-update}{{4}{6}{M-step}{equation.3.4}{}}
+\newlabel{eq:sig1-update}{{5}{6}{M-step}{equation.3.5}{}}
+\newlabel{eq:sig0-update}{{6}{6}{M-step}{equation.3.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Derivation sketch.}{6}{section*.10}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Weighted Semi-Supervised EM}}{7}{algorithm.1}\protected@file@percent }
+\newlabel{alg:ssem}{{1}{7}{Convergence and initialization}{algorithm.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Convergence and initialization.}{7}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Confidence-Weighted Unlabeled Likelihood}{7}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:conf-weighted}{{3.4}{7}{Confidence-Weighted Unlabeled Likelihood}{subsection.3.4}{}}
+\newlabel{eq:conf-objective}{{7}{7}{Confidence-Weighted Unlabeled Likelihood}{equation.3.7}{}}
+\newlabel{eq:conf-weight}{{8}{7}{Confidence-Weighted Unlabeled Likelihood}{equation.3.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Algorithm under confidence weighting (MM surrogate).}{7}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Numerical Considerations}{8}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Prediction and Within-Group Competition}{8}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Choosing the Unlabeled Weight \(\lambda \)}{8}{subsection.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interpretation via effective sample size.}{8}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Selection by labeled validation (preferred in practice).}{9}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Calibration-driven choice.}{9}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Information criteria.}{9}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Learning the Unlabeled Weight $\lambda $}{9}{subsection.3.8}\protected@file@percent }
+\newlabel{sec:learn-lam}{{3.8}{9}{Learning the Unlabeled Weight \texorpdfstring {$\lambda $}{lambda}}{subsection.3.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Setup.}{9}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Gradient via IFT.}{9}{section*.18}\protected@file@percent }
+\newlabel{eq:lam-gradient}{{9}{9}{Gradient via IFT}{equation.3.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Alignment coefficient.}{9}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Practical algorithm.}{10}{section*.20}\protected@file@percent }
+\newlabel{rem:pop-sample}{{1}{10}{Population vs.\ sample objects}{remark.1}{}}
+\newlabel{rem:dual-lambda}{{2}{10}{Dual role of \(\lambda \) and connection to \(\hat g_0\)}{remark.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Theory}{10}{section.4}\protected@file@percent }
+\newlabel{sec:theory}{{4}{10}{Theory}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}EM Monotonicity}{10}{subsection.4.1}\protected@file@percent }
+\newlabel{prop:em}{{1}{10}{Weighted EM monotonicity}{proposition.1}{}}
+\citation{dempster1977maximum}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Effective Sample Size}{11}{subsection.4.2}\protected@file@percent }
+\newlabel{prop:ess}{{2}{11}{Effective sample size at fixed point}{proposition.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}The Pseudo-True Parameter Path}{12}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:misspec}{{4.3}{12}{The Pseudo-True Parameter Path}{subsection.4.3}{}}
+\newlabel{thm:path}{{1}{12}{Pseudo-true parameter path}{theorem.1}{}}
+\newlabel{eq:path-derivative}{{10}{12}{Pseudo-true parameter path}{equation.4.10}{}}
+\newlabel{cor:correct}{{1.1}{12}{Correct specification}{corollary.1.1}{}}
+\newlabel{cor:misspec}{{1.2}{12}{Misspecification rate and direction}{corollary.1.2}{}}
+\newlabel{cor:second-order}{{1.3}{12}{Second-order expansion of validation criterion}{corollary.1.3}{}}
+\newlabel{eq:second-order}{{11}{12}{Second-order expansion of validation criterion}{equation.4.11}{}}
+\newlabel{rem:g0-gaussian}{{4}{13}{Closed form in the Gaussian model}{remark.4}{}}
+\newlabel{rem:diagnostic}{{5}{13}{Sample diagnostic}{remark.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Restricted Mean-Subspace Path}{13}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:mean-subspace}{{4.4}{13}{Restricted Mean-Subspace Path}{subsection.4.4}{}}
+\newlabel{prop:mean-subspace}{{3}{13}{Mean-subspace restricted path}{proposition.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Bounded Damage Under Confidence Weighting}{14}{subsection.4.5}\protected@file@percent }
+\newlabel{prop:conf-safety}{{4}{14}{Confidence-weighted component-wise attenuation}{proposition.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}High-Dimensional Alignment and the Limits of Unlabeled Data}{14}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:high-dim-theory}{{4.6}{14}{High-Dimensional Alignment and the Limits of Unlabeled Data}{subsection.4.6}{}}
+\citation{amari1998natural}
+\@writefile{toc}{\contentsline {paragraph}{Signal and nuisance decomposition.}{15}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{When each component dominates.}{15}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Simulations}{16}{section.5}\protected@file@percent }
+\newlabel{sec:simulations}{{5}{16}{Simulations}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Setup}{16}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Overview of experiments.}{16}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Diagnostic Validity of the Alignment Coefficient}{16}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:sim-diagnostic}{{5.2}{16}{Diagnostic Validity of the Alignment Coefficient}{subsection.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  \textbf  {Diagnostic validity of \(\mathcal  {A}(0)\) in a controlled boundary-shift experiment.} Labeled data have mean shift \(b=1\); unlabeled data vary over \(\delta \in \{0,0.5,\ldots  ,3.0\}\). \emph  {Left}: each point is one replication; color encodes \(\delta \). \(\mathcal  {A}(0)\) (mean-subspace alignment, computed before any EM fitting) is positive when unlabeled data help and negative when they hurt. Correlation \(r=0.47\); sign agreement \(72\%\). \emph  {Right}: the per-observation score residual norm \(\|\hat  g_0\|\) as the cheaper one-number pre-fitting indicator; it peaks when the unlabeled distribution is farthest from the labeled class structure. }}{17}{figure.1}\protected@file@percent }
+\newlabel{fig:diagnostic}{{1}{17}{\textbf {Diagnostic validity of \(\calA (0)\) in a controlled boundary-shift experiment.} Labeled data have mean shift \(b=1\); unlabeled data vary over \(\delta \in \{0,0.5,\ldots ,3.0\}\). \emph {Left}: each point is one replication; color encodes \(\delta \). \(\calA (0)\) (mean-subspace alignment, computed before any EM fitting) is positive when unlabeled data help and negative when they hurt. Correlation \(r=0.47\); sign agreement \(72\%\). \emph {Right}: the per-observation score residual norm \(\|\hat g_0\|\) as the cheaper one-number pre-fitting indicator; it peaks when the unlabeled distribution is farthest from the labeled class structure}{figure.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Design.}{17}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{17}{section*.25}\protected@file@percent }
+\newlabel{rem:mean-diagnostic}{{11}{18}{Mean-subspace alignment coefficient}{remark.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}The Bias--Variance Tradeoff as a Function of $\lambda $}{18}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:sim-bv}{{5.3}{18}{The Bias--Variance Tradeoff as a Function of \texorpdfstring {$\lambda $}{lambda}}{subsection.5.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Design.}{18}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{18}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interpretation.}{18}{section*.28}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  \textbf  {Bias--variance tradeoff as a function of \(\lambda \).} \(N_1=N_0=20\), \(N_u=500\), \(B=300\) replications. \emph  {Left}: variance and bias\(^2\) of \(\hat  \mu _{1,0}\) (the key discriminative coordinate) versus \(\lambda \). Under correct specification (green), variance first falls then rises; bias\(^2\) grows slowly. Under misspecification (red, Student-\(t\), \(\nu =3\)), bias\(^2\) is immediately large and dominates. \emph  {Right}: test AUROC versus \(\lambda \). Correct specification peaks at \(\lambda \approx 0.5\) (\(+5.5\%\) over supervised baseline); misspecification degrades immediately toward chance level. The score residual \(\hat  g_0\) would flag the red scenario before any EM fitting is attempted. }}{19}{figure.2}\protected@file@percent }
+\newlabel{fig:bv}{{2}{19}{\textbf {Bias--variance tradeoff as a function of \(\lambda \).} \(N_1=N_0=20\), \(N_u=500\), \(B=300\) replications. \emph {Left}: variance and bias\(^2\) of \(\hat \mu _{1,0}\) (the key discriminative coordinate) versus \(\lam \). Under correct specification (green), variance first falls then rises; bias\(^2\) grows slowly. Under misspecification (red, Student-\(t\), \(\nu =3\)), bias\(^2\) is immediately large and dominates. \emph {Right}: test AUROC versus \(\lam \). Correct specification peaks at \(\lam \approx 0.5\) (\(+5.5\%\) over supervised baseline); misspecification degrades immediately toward chance level. The score residual \(\hat g_0\) would flag the red scenario before any EM fitting is attempted}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}$\lambda $-Selection: Default, Grid Search, and Gradient Ascent}{19}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:sim-lam}{{5.4}{19}{\texorpdfstring {$\lambda $}{lambda}-Selection: Default, Grid Search, and Gradient Ascent}{subsection.5.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Design.}{19}{section*.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{19}{section*.30}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  \textbf  {\(\lambda \)-selection strategies.} \(N_1=N_0=40\), \(N_u=600\), \(B=100\) replications, \(d=5\). \emph  {(a)}: Test AUROC distributions by method. ESS default (mean AUROC \(0.903\), mean \(\hat  \lambda =0.13\)) is outperformed by both data-adaptive strategies; gradient ascent achieves mean AUROC \(0.909\) with mean \(\hat  \lambda =1.08\). \emph  {(b)}: Selected \(\lambda \) vs.\ test AUROC per trial, colored by method. ESS (orange) forms a tight vertical stripe at \(\lambda \approx 0.13\) (one order of magnitude below the empirical optimum), confirming that the ESS heuristic substantially underweights unlabeled data. Grid search (green) and gradient ascent (blue) both concentrate in the \(\lambda =0.5\)--\(10\) range and achieve systematically higher AUROC. }}{20}{figure.3}\protected@file@percent }
+\newlabel{fig:lam-learn}{{3}{20}{\textbf {\(\lambda \)-selection strategies.} \(N_1=N_0=40\), \(N_u=600\), \(B=100\) replications, \(d=5\). \emph {(a)}: Test AUROC distributions by method. ESS default (mean AUROC \(0.903\), mean \(\hat \lambda =0.13\)) is outperformed by both data-adaptive strategies; gradient ascent achieves mean AUROC \(0.909\) with mean \(\hat \lambda =1.08\). \emph {(b)}: Selected \(\lambda \) vs.\ test AUROC per trial, colored by method. ESS (orange) forms a tight vertical stripe at \(\lambda \approx 0.13\) (one order of magnitude below the empirical optimum), confirming that the ESS heuristic substantially underweights unlabeled data. Grid search (green) and gradient ascent (blue) both concentrate in the \(\lambda =0.5\)--\(10\) range and achieve systematically higher AUROC}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Misspecification: Score Residual as a Pre-Fitting Risk Indicator}{20}{subsection.5.5}\protected@file@percent }
+\newlabel{sec:sim-misspec}{{5.5}{20}{Misspecification: Score Residual as a Pre-Fitting Risk Indicator}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{Design.}{20}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{20}{section*.32}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Misspecification experiment results (\(B=200\) replications each). \(\|\hat  g_0\|\) is the per-observation score residual norm (scale-invariant w.r.t.\ \(N_u\)). Degradation \(= \text  {R2} - \text  {R3}\); positive values indicate R3 worse than R2.}}{21}{table.1}\protected@file@percent }
+\newlabel{tab:misspec}{{1}{21}{Misspecification experiment results (\(B=200\) replications each). \(\|\hat g_0\|\) is the per-observation score residual norm (scale-invariant w.r.t.\ \(N_u\)). Degradation \(= \text {R2} - \text {R3}\); positive values indicate R3 worse than R2}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  \textbf  {Score residual \(\|\hat  g_0\|\) (per-observation) as a misspecification indicator.} Each point is one simulation replication, colored by scenario. Degradation \(= \text  {AUROC}_{R2} - \text  {AUROC}_{R3}\); positive values indicate harm from unlabeled data. The Student-\(t\) scenario (red) concentrates in the upper-right quadrant, confirming that a large score residual norm predicts R3 degradation. }}{21}{figure.4}\protected@file@percent }
+\newlabel{fig:misspec}{{4}{21}{\textbf {Score residual \(\|\hat g_0\|\) (per-observation) as a misspecification indicator.} Each point is one simulation replication, colored by scenario. Degradation \(= \text {AUROC}_{R2} - \text {AUROC}_{R3}\); positive values indicate harm from unlabeled data. The Student-\(t\) scenario (red) concentrates in the upper-right quadrant, confirming that a large score residual norm predicts R3 degradation}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Local Trajectory Validation}{21}{subsection.5.6}\protected@file@percent }
+\newlabel{sec:sim-local}{{5.6}{21}{Local Trajectory Validation}{subsection.5.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Persistence of the Alignment Signal Across $\lambda $}{21}{subsection.5.7}\protected@file@percent }
+\newlabel{sec:sim-persistence}{{5.7}{21}{Persistence of the Alignment Signal Across \texorpdfstring {$\lambda $}{lambda}}{subsection.5.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  \textbf  {AUROC gain(\(\lambda \)) and first-order tangent \(\lambda \cdot \mathcal  {A}_\mu (0)\)} (dashed lines) for three unlabeled-shift levels (\(B=60\) replications). At \(\delta =0\) (green), gain is positive and the tangent is accurate near \(\lambda =0\). At \(\delta =3\) (red), gain is negative and the sign is correctly predicted. At \(\delta =1.5\) (orange), the first-order term is small and positive, but the second-order term eventually dominates, producing a sign reversal at \(\lambda \approx 2\)---the regime in which \(\mathcal  {A}_\mu (0)\) most often fails. }}{22}{figure.5}\protected@file@percent }
+\newlabel{fig:lam-traj}{{5}{22}{\textbf {AUROC gain(\(\lambda \)) and first-order tangent \(\lambda \cdot \calA _\mu (0)\)} (dashed lines) for three unlabeled-shift levels (\(B=60\) replications). At \(\delta =0\) (green), gain is positive and the tangent is accurate near \(\lam =0\). At \(\delta =3\) (red), gain is negative and the sign is correctly predicted. At \(\delta =1.5\) (orange), the first-order term is small and positive, but the second-order term eventually dominates, producing a sign reversal at \(\lam \approx 2\)---the regime in which \(\calA _\mu (0)\) most often fails}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8}Diagnostic as an Operational Decision Rule}{22}{subsection.5.8}\protected@file@percent }
+\newlabel{sec:sim-decision}{{5.8}{22}{Diagnostic as an Operational Decision Rule}{subsection.5.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces  \textbf  {Persistence of the alignment signal across \(\lambda \).} \emph  {Left}: Pearson correlation between \(\mathcal  {A}_\mu (0)\) and AUROC gain as a function of \(\lambda \), pooled over all \(\delta \) levels. Correlation is stable (\(r\approx 0.47\text  {--}0.58\)) with no monotone decay, indicating that the directional signal in \(\mathcal  {A}_\mu (0)\) is not restricted to the local \(\lambda \approx 0\) regime in this design. \emph  {Right}: scatter of \(\mathcal  {A}_\mu (0)\) vs.\ gain at \(\lambda =0.05\) (local) and \(\lambda =2.0\) (far); regression lines are nearly parallel, confirming structural stability. }}{23}{figure.6}\protected@file@percent }
+\newlabel{fig:local-lambda}{{6}{23}{\textbf {Persistence of the alignment signal across \(\lambda \).} \emph {Left}: Pearson correlation between \(\calA _\mu (0)\) and AUROC gain as a function of \(\lam \), pooled over all \(\delta \) levels. Correlation is stable (\(r\approx 0.47\text {--}0.58\)) with no monotone decay, indicating that the directional signal in \(\calA _\mu (0)\) is not restricted to the local \(\lam \approx 0\) regime in this design. \emph {Right}: scatter of \(\calA _\mu (0)\) vs.\ gain at \(\lam =0.05\) (local) and \(\lam =2.0\) (far); regression lines are nearly parallel, confirming structural stability}{figure.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Results.}{23}{section*.33}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces  \textbf  {Decision accuracy and mean regret by misspecification level.} \(D = \mathbf  {1}[\mathcal  {A}_\mu (0)>0]\); oracle \(O = \mathbf  {1}[\Delta \mathrm  {AUROC}>0]\). ``Diag.\ use'' = fraction of replications where the diagnostic recommends using unlabeled data; ``Oracle use'' = fraction where oracle recommends use. \(B=100\), \(N_1=N_0=15\), \(N_u=300\), \(\lambda =0.5\). }}{24}{table.2}\protected@file@percent }
+\newlabel{tab:decision}{{2}{24}{\textbf {Decision accuracy and mean regret by misspecification level.} \(D = \mathbf {1}[\calA _\mu (0)>0]\); oracle \(O = \mathbf {1}[\Delta \mathrm {AUROC}>0]\). ``Diag.\ use'' = fraction of replications where the diagnostic recommends using unlabeled data; ``Oracle use'' = fraction where oracle recommends use. \(B=100\), \(N_1=N_0=15\), \(N_u=300\), \(\lam =0.5\)}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.9}Confidence-Weighting Ablation: Does $\lambda (x)$ Select the Right Points?}{24}{subsection.5.9}\protected@file@percent }
+\newlabel{sec:sim-conf-ablation}{{5.9}{24}{Confidence-Weighting Ablation: Does \texorpdfstring {$\lambda (x)$}{lambda(x)} Select the Right Points?}{subsection.5.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Design.}{24}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{24}{section*.35}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces  \textbf  {Diagnostic as a decision rule.} \emph  {Left}: stacked bars show the composition of decisions (TP=green, FP=red, FN=orange, TN=blue) per \(\delta \) level. At low \(\delta \) the diagnostic correctly recommends use (TP dominant); at \(\delta =1.5\)--\(2.0\) a large FN block appears (diagnostic over-conservative); at high \(\delta \) TN recovers. \emph  {Right}: scatter of \(\Delta \mathrm  {AUROC}\) vs.\ \(\mathcal  {A}_\mu (0)\), colored by decision outcome. The quadrant shading marks the error regions (FP: top-left; FN: bottom-right). Most regret accrues in the FN region at intermediate \(\delta \). Overall accuracy 68\%, mean regret 0.006. }}{25}{figure.7}\protected@file@percent }
+\newlabel{fig:decision}{{7}{25}{\textbf {Diagnostic as a decision rule.} \emph {Left}: stacked bars show the composition of decisions (TP=green, FP=red, FN=orange, TN=blue) per \(\delta \) level. At low \(\delta \) the diagnostic correctly recommends use (TP dominant); at \(\delta =1.5\)--\(2.0\) a large FN block appears (diagnostic over-conservative); at high \(\delta \) TN recovers. \emph {Right}: scatter of \(\Delta \mathrm {AUROC}\) vs.\ \(\calA _\mu (0)\), colored by decision outcome. The quadrant shading marks the error regions (FP: top-left; FN: bottom-right). Most regret accrues in the FN region at intermediate \(\delta \). Overall accuracy 68\%, mean regret 0.006}{figure.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.10}Cross-Dataset Diagnostic Evaluation}{25}{subsection.5.10}\protected@file@percent }
+\newlabel{sec:sim-real}{{5.10}{25}{Cross-Dataset Diagnostic Evaluation}{subsection.5.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.11}Finite-Sample Regimes and Decision Reliability}{25}{subsection.5.11}\protected@file@percent }
+\newlabel{sec:sim-regime}{{5.11}{25}{Finite-Sample Regimes and Decision Reliability}{subsection.5.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces  \textbf  {Confidence-weighting ablation.} \emph  {Top row}: clean Gaussian; \emph  {bottom row}: 20\% localized boundary-noise contamination. \emph  {Left}: unlabeled feature space colored by \(w(x)\) (plasma scale); contaminated points circled in orange. The supervised decision boundary is overlaid (black contour). \emph  {Center}: \(w(x)\) vs.\ logit-posterior for clean (blue) and contaminated (orange) points; contaminated points cluster at logit $\approx 0$ (boundary) and receive \(w\lesssim 0.6\). \emph  {Right}: AUROC gain over supervised baseline for four conditions. Top-30\% recovers gain under contamination; bottom-30\% is consistently harmful. }}{26}{figure.8}\protected@file@percent }
+\newlabel{fig:conf-ablation}{{8}{26}{\textbf {Confidence-weighting ablation.} \emph {Top row}: clean Gaussian; \emph {bottom row}: 20\% localized boundary-noise contamination. \emph {Left}: unlabeled feature space colored by \(w(x)\) (plasma scale); contaminated points circled in orange. The supervised decision boundary is overlaid (black contour). \emph {Center}: \(w(x)\) vs.\ logit-posterior for clean (blue) and contaminated (orange) points; contaminated points cluster at logit $\approx 0$ (boundary) and receive \(w\lesssim 0.6\). \emph {Right}: AUROC gain over supervised baseline for four conditions. Top-30\% recovers gain under contamination; bottom-30\% is consistently harmful}{figure.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Design.}{26}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{26}{section*.37}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  \textbf  {Cross-dataset diagnostic evaluation on five UCI benchmarks.} \emph  {Left}: alignment coefficient \(\mathcal  {A}_\mu (0)\) vs.\ realized AUROC gain (R3 \(-\) R2) per replication, colored by dataset. Points in the correct quadrants (positive \(A\), positive gain; or negative \(A\), negative gain) count as decision successes. \emph  {Center}: mean AUROC gain for R3 (global \(\lambda \)), R4 (Gaussian \(\lambda (x)\)), and R5 (neural \(\lambda (x)\)) over R2. \emph  {Right}: diagnostic decision accuracy per dataset. Datasets with low \(\|\hat  g_0\|\) (Banknote, Breast Cancer) achieve 65--70\% accuracy; those with high \(\|\hat  g_0\|\) (Sonar, Spambase) fall to 40--50\%. The two-stage screen---check \(\|\hat  g_0\|\) before applying \(\mathcal  {A}_\mu (0)\)---is validated empirically. }}{27}{figure.9}\protected@file@percent }
+\newlabel{fig:real-data}{{9}{27}{\textbf {Cross-dataset diagnostic evaluation on five UCI benchmarks.} \emph {Left}: alignment coefficient \(\mathcal {A}_\mu (0)\) vs.\ realized AUROC gain (R3 \(-\) R2) per replication, colored by dataset. Points in the correct quadrants (positive \(A\), positive gain; or negative \(A\), negative gain) count as decision successes. \emph {Center}: mean AUROC gain for R3 (global \(\lambda \)), R4 (Gaussian \(\lambda (x)\)), and R5 (neural \(\lambda (x)\)) over R2. \emph {Right}: diagnostic decision accuracy per dataset. Datasets with low \(\|\hat g_0\|\) (Banknote, Breast Cancer) achieve 65--70\% accuracy; those with high \(\|\hat g_0\|\) (Sonar, Spambase) fall to 40--50\%. The two-stage screen---check \(\|\hat g_0\|\) before applying \(\mathcal {A}_\mu (0)\)---is validated empirically}{figure.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Interpretation.}{27}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.12}High-Dimensional Geometry and the Limits of Unlabeled Data}{27}{subsection.5.12}\protected@file@percent }
+\newlabel{sec:sim-dimension}{{5.12}{27}{High-Dimensional Geometry and the Limits of Unlabeled Data}{subsection.5.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces  \textbf  {Regime-grid decision accuracy and mean regret.} Each cell averages over \(B=30\) replications \(\times \) 7 \(\delta \)-levels (210 decisions per cell). \(N_{\mathrm  {lab}}\): labeled samples per class; \(N_u\): unlabeled samples; \(N_{\mathcal  {V}}\): validation samples per class. Accuracy = \(\Pr (D=O)\); regret = \(|\Delta \mathrm  {AUROC}|\cdot \mathbf  {1}[D\neq  O]\). Bold: best accuracy within each \(N_{\mathrm  {lab}}\) row. }}{28}{table.3}\protected@file@percent }
+\newlabel{tab:regime}{{3}{28}{\textbf {Regime-grid decision accuracy and mean regret.} Each cell averages over \(B=30\) replications \(\times \) 7 \(\delta \)-levels (210 decisions per cell). \(N_{\mathrm {lab}}\): labeled samples per class; \(N_u\): unlabeled samples; \(N_{\mathcal {V}}\): validation samples per class. Accuracy = \(\Pr (D=O)\); regret = \(|\Delta \mathrm {AUROC}|\cdot \mathbf {1}[D\neq O]\). Bold: best accuracy within each \(N_{\mathrm {lab}}\) row}{table.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Results.}{28}{section*.39}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces  \textbf  {Decision accuracy as a response surface over finite-sample regimes.} Each cell shows \(\Pr (\hat  {D}=O)\) for the alignment diagnostic \(\hat  {D}=\mathbf  {1}[\hat  {\mathcal  {A}}_\mu (0)>0]\) vs.\ the oracle \(O=\mathbf  {1}[\Delta \mathrm  {AUROC}>0]\) at \(\lambda =0.5\). Columns: unlabeled size \(N_u\). Rows: labeled size \(N_{\mathrm  {lab}}\). Panels: validation size \(N_{\mathcal  {V}}\). Accuracy is highest (green) at small \(N_{\mathrm  {lab}}\) where semi-supervised gains are large and decisions are consequential. }}{29}{figure.10}\protected@file@percent }
+\newlabel{fig:regime-grid}{{10}{29}{\textbf {Decision accuracy as a response surface over finite-sample regimes.} Each cell shows \(\Pr (\hat {D}=O)\) for the alignment diagnostic \(\hat {D}=\mathbf {1}[\hat {\calA }_\mu (0)>0]\) vs.\ the oracle \(O=\mathbf {1}[\Delta \mathrm {AUROC}>0]\) at \(\lam =0.5\). Columns: unlabeled size \(N_u\). Rows: labeled size \(N_{\mathrm {lab}}\). Panels: validation size \(N_{\mathcal {V}}\). Accuracy is highest (green) at small \(N_{\mathrm {lab}}\) where semi-supervised gains are large and decisions are consequential}{figure.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces  \textbf  {Mean AUROC gain over supervised (R2) by dimension and geometry.} R3: global \(\lambda =0.5\). \(N_1=N_0=20\), \(N_u=500\), \(B=60\) replications. Bold: largest gain per geometry. Parentheses: R4 (confidence-weighted) where it differs from R3 by \(\geq 0.005\). }}{29}{table.4}\protected@file@percent }
+\newlabel{tab:dimension}{{4}{29}{\textbf {Mean AUROC gain over supervised (R2) by dimension and geometry.} R3: global \(\lambda =0.5\). \(N_1=N_0=20\), \(N_u=500\), \(B=60\) replications. Bold: largest gain per geometry. Parentheses: R4 (confidence-weighted) where it differs from R3 by \(\geq 0.005\)}{table.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Implications.}{29}{section*.40}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces  \textbf  {AUROC gain over supervised baseline by dimension and unlabeled geometry.} Shaded bands: \(\pm 1\) SE over \(B=60\) replications. \emph  {Left}: aligned dense signal---gain peaks at \(m=10\) (\(+0.019\)) then flattens near zero as \(m\) grows. \emph  {Centre}: sparse signal---peak gain at \(m=10\) (\(+0.033\)) reflects covariance stabilization across noise dimensions; confidence weighting (R4, dashed) further improves this regime. \emph  {Right}: misaligned geometry---largest harm at low \(m\) (\(-0.127\) at \(m=2\)) where the orthogonal cluster directly displaces the class boundary; harm attenuates at moderate \(m\) as covariance regularization partially compensates, but confidence weighting (R4) amplifies the harm substantially at \(m=5\) and \(m=10\). \emph  {Bottom-right inset}: diagnostic accuracy---fraction of replications where \(\text  {sign}(A(0))=\text  {sign}(\text  {gain})\); accuracy is highest for sparse signal at moderate \(m\) and collapses at \(m=50\). }}{30}{figure.11}\protected@file@percent }
+\newlabel{fig:dim-sweep}{{11}{30}{\textbf {AUROC gain over supervised baseline by dimension and unlabeled geometry.} Shaded bands: \(\pm 1\) SE over \(B=60\) replications. \emph {Left}: aligned dense signal---gain peaks at \(m=10\) (\(+0.019\)) then flattens near zero as \(m\) grows. \emph {Centre}: sparse signal---peak gain at \(m=10\) (\(+0.033\)) reflects covariance stabilization across noise dimensions; confidence weighting (R4, dashed) further improves this regime. \emph {Right}: misaligned geometry---largest harm at low \(m\) (\(-0.127\) at \(m=2\)) where the orthogonal cluster directly displaces the class boundary; harm attenuates at moderate \(m\) as covariance regularization partially compensates, but confidence weighting (R4) amplifies the harm substantially at \(m=5\) and \(m=10\). \emph {Bottom-right inset}: diagnostic accuracy---fraction of replications where \(\text {sign}(A(0))=\text {sign}(\text {gain})\); accuracy is highest for sparse signal at moderate \(m\) and collapses at \(m=50\)}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.13}Parameter Recovery Under Correct Specification}{30}{subsection.5.13}\protected@file@percent }
+\newlabel{sec:sim-param-recovery}{{5.13}{30}{Parameter Recovery Under Correct Specification}{subsection.5.13}{}}
+\@writefile{toc}{\contentsline {paragraph}{Results.}{30}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.14}Misspecification}{30}{subsection.5.14}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces  \textbf  {Parameter recovery RMSE.} $(N_1,N_0) = (50,50)$, $d=5$, $B=200$ replications, correct Gaussian specification. RMSE$(\mu )$ = average of $\|\hat  \mu _1 - \mu _1\|_2 / \sqrt  {d}$ and same for class 0. RMSE$(\Sigma )$ = Frobenius-norm average over both classes, divided by $d$. }}{31}{table.5}\protected@file@percent }
+\newlabel{tab:param-recovery}{{5}{31}{\textbf {Parameter recovery RMSE.} $(N_1,N_0) = (50,50)$, $d=5$, $B=200$ replications, correct Gaussian specification. RMSE$(\mu )$ = average of $\|\hat \mu _1 - \mu _1\|_2 / \sqrt {d}$ and same for class 0. RMSE$(\Sigma )$ = Frobenius-norm average over both classes, divided by $d$}{table.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  \textbf  {Parameter recovery RMSE vs.\ unlabeled sample size.} R2 (supervised, green) is flat because it cannot use unlabeled data. R3 (global \(\lambda \), blue) improves steadily. R4 (confidence-weighted, red) is intermediate: it sacrifices some mean recovery for contamination robustness. }}{31}{figure.12}\protected@file@percent }
+\newlabel{fig:param-recovery}{{12}{31}{\textbf {Parameter recovery RMSE vs.\ unlabeled sample size.} R2 (supervised, green) is flat because it cannot use unlabeled data. R3 (global \(\lambda \), blue) improves steadily. R4 (confidence-weighted, red) is intermediate: it sacrifices some mean recovery for contamination robustness}{figure.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.15}Sensitivity to $\lambda $ and $\alpha $}{31}{subsection.5.15}\protected@file@percent }
+\newlabel{sec:sim-sensitivity}{{5.15}{31}{Sensitivity to \texorpdfstring {$\lambda $}{lambda} and \texorpdfstring {$\alpha $}{alpha}}{subsection.5.15}{}}
+\@writefile{toc}{\contentsline {paragraph}{Sensitivity to \(\lambda \).}{31}{section*.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sensitivity to \(\alpha \).}{31}{section*.43}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  \textbf  {Sensitivity to hyperparameters.} \emph  {(a) R3: AUROC vs.\ \(\lambda \)} (log scale) under correct Gaussian (solid blue) and sub-cluster misspecification (dashed red). Both peak near \(\lambda \approx 0.5\)--1.0; the ESS default (dotted gray vertical, \(\lambda \approx 0.067\)) substantially underweights the unlabeled sample. \emph  {(b) R4: AUROC vs.\ \(\alpha \)} at the mean grid-optimal \(\lambda ^*\). Moderate \(\alpha \in [0,1]\) is near-optimal in both scenarios; high \(\alpha \) discards too many unlabeled points. Error bands: \(\pm 1\) SE over \(B=100\) replications. }}{32}{figure.13}\protected@file@percent }
+\newlabel{fig:sensitivity}{{13}{32}{\textbf {Sensitivity to hyperparameters.} \emph {(a) R3: AUROC vs.\ \(\lambda \)} (log scale) under correct Gaussian (solid blue) and sub-cluster misspecification (dashed red). Both peak near \(\lambda \approx 0.5\)--1.0; the ESS default (dotted gray vertical, \(\lambda \approx 0.067\)) substantially underweights the unlabeled sample. \emph {(b) R4: AUROC vs.\ \(\alpha \)} at the mean grid-optimal \(\lambda ^*\). Moderate \(\alpha \in [0,1]\) is near-optimal in both scenarios; high \(\alpha \) discards too many unlabeled points. Error bands: \(\pm 1\) SE over \(B=100\) replications}{figure.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.16}Within-Group Competition Scoring}{32}{subsection.5.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Empirical Applications}{32}{section.6}\protected@file@percent }
+\newlabel{sec:empirical}{{6}{32}{Empirical Applications}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Cross-Dataset Benchmark Evaluation}{32}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:empirical-benchmark}{{6.1}{32}{Cross-Dataset Benchmark Evaluation}{subsection.6.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  \textbf  {Cross-dataset benchmark evaluation.} \emph  {Left}: alignment coefficient \(\mathcal  {A}_\mu (0)\) vs.\ realized AUROC gain per replication, colored by dataset. Points in the upper-right and lower-left quadrants are correct decisions. Near-Gaussian datasets (Banknote, Breast Cancer) cluster near the diagonal; high-\(\|\hat  g_0\|\) datasets (Sonar, Spambase) are scattered. \emph  {Center}: mean AUROC gain over R2 for R3, R4, R5. \emph  {Right}: per-dataset decision accuracy. The two-stage screen (filter on \(\|\hat  g_0\|\), then apply \(\mathcal  {A}_\mu (0)\)) correctly identifies which datasets benefit from semi-supervised learning. }}{33}{figure.14}\protected@file@percent }
+\newlabel{fig:real-data-emp}{{14}{33}{\textbf {Cross-dataset benchmark evaluation.} \emph {Left}: alignment coefficient \(\mathcal {A}_\mu (0)\) vs.\ realized AUROC gain per replication, colored by dataset. Points in the upper-right and lower-left quadrants are correct decisions. Near-Gaussian datasets (Banknote, Breast Cancer) cluster near the diagonal; high-\(\|\hat g_0\|\) datasets (Sonar, Spambase) are scattered. \emph {Center}: mean AUROC gain over R2 for R3, R4, R5. \emph {Right}: per-dataset decision accuracy. The two-stage screen (filter on \(\|\hat g_0\|\), then apply \(\mathcal {A}_\mu (0)\)) correctly identifies which datasets benefit from semi-supervised learning}{figure.14}{}}
+\@writefile{toc}{\contentsline {paragraph}{Results.}{33}{section*.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Notes-to-Claimants Matching}{33}{subsection.6.2}\protected@file@percent }
+\citation{nigam2000text}
+\citation{chapelle2006semi}
+\citation{mclachlan2019finite}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}\textcolor {red}{\textbf  {[TODO: Second Application]}}}{34}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{34}{section.7}\protected@file@percent }
+\newlabel{sec:discussion}{{7}{34}{Discussion}{section.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{When unlabeled data help.}{34}{section*.45}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations of the Gaussian assumption.}{34}{section*.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Beyond binary classification.}{34}{section*.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Discriminative alternatives.}{34}{section*.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Variance reduction and its limits.}{34}{section*.49}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{From structural conditions to a decision-theoretic diagnostic.}{34}{section*.50}\protected@file@percent }
+\citation{hyvarinen2005estimation}
+\citation{liu2016kernelized}
+\@writefile{toc}{\contentsline {paragraph}{High-dimensional geometry and the empirical-Bayes analogy.}{35}{section*.51}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Connection to score matching and Stein discrepancy.}{35}{section*.52}\protected@file@percent }
+\citation{amari1998natural}
+\citation{sato2001online}
+\bibstyle{plainnat}
+\bibcite{banfield1993model}{{1}{1993}{{Banfield and Raftery}}{{}}}
+\bibcite{chapelle2006semi}{{2}{2006}{{Chapelle et al.}}{{}}}
+\bibcite{christophides2020overview}{{3}{2020}{{Christophides et al.}}{{}}}
+\bibcite{dempster1977maximum}{{4}{1977}{{Dempster et al.}}{{}}}
+\@writefile{toc}{\contentsline {paragraph}{Information-geometric interpretation.}{36}{section*.53}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Open problems.}{36}{section*.54}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Regularity Conditions for Corollary\nobreakspace  {}\ref {cor:misspec}}{36}{appendix.A}\protected@file@percent }
+\newlabel{sec:regularity}{{A}{36}{Regularity Conditions for Corollary~\ref {cor:misspec}}{appendix.A}{}}
+\bibcite{elkan2008learning}{{5}{2008}{{Elkan and Noto}}{{}}}
+\bibcite{fellegi1969theory}{{6}{1969}{{Fellegi and Sunter}}{{}}}
+\bibcite{fraley2002model}{{7}{2002}{{Fraley and Raftery}}{{}}}
+\bibcite{mclachlan2019finite}{{8}{2019}{{McLachlan and Lee}}{{}}}
+\bibcite{ganesalingam1978classification}{{9}{1978}{{Ganesalingam and McLachlan}}{{}}}
+\bibcite{cozman2002unlabeled}{{10}{2002}{{Cozman and Cohen}}{{}}}
+\bibcite{ghahramani1994supervised}{{11}{1994}{{Ghahramani and Jordan}}{{}}}
+\bibcite{huang2009semi}{{12}{2009}{{Huang and Hasegawa-Johnson}}{{}}}
+\bibcite{ji2009semisupervised}{{13}{2009}{{Ji et al.}}{{}}}
+\bibcite{laine2016temporal}{{14}{2016}{{Laine and Aila}}{{}}}
+\bibcite{larsen2001iterative}{{15}{2001}{{Larsen and Rubin}}{{}}}
+\bibcite{lee2013pseudo}{{16}{2013}{{Lee}}{{}}}
+\bibcite{liu2002partially}{{17}{2002}{{Liu et al.}}{{}}}
+\bibcite{mcnicholas2016mixture}{{18}{2016}{{McNicholas}}{{}}}
+\bibcite{miyato2018virtual}{{19}{2018}{{Miyato et al.}}{{}}}
+\bibcite{nigam2000text}{{20}{2000}{{Nigam et al.}}{{}}}
+\bibcite{o1978normal}{{21}{1978}{{O'Neill}}{{}}}
+\bibcite{ratner2017snorkel}{{22}{2017}{{Ratner et al.}}{{}}}
+\bibcite{scudder1965probability}{{23}{1965}{{Scudder}}{{}}}
+\bibcite{yang1995classification}{{24}{1995}{{Yang and Loog}}{{}}}
+\bibcite{zhou2018brief}{{25}{2018}{{Zhou and Li}}{{}}}
+\bibcite{zhu2005semi}{{26}{2005}{{Zhu}}{{}}}
+\bibcite{hyvarinen2005estimation}{{27}{2005}{{Hyv\"{a}rinen}}{{}}}
+\bibcite{liu2016kernelized}{{28}{2016}{{Liu and Wang}}{{}}}
+\bibcite{amari1998natural}{{29}{1998}{{Amari}}{{}}}
+\bibcite{sato2001online}{{30}{2001}{{Sato}}{{}}}
+\gdef \@abspage@last{38}

@@ -1,0 +1,85 @@
+dataset,d,N,N_lab,model,auroc_mean,auroc_std,delta_vs_supervised,n_seeds
+Breast Cancer,30,569,20,Supervised,0.94131,0.01787,+0.00000,10
+Breast Cancer,30,569,20,Semi(lam=0.1),0.97575,0.01020,+0.03444,10
+Breast Cancer,30,569,20,Semi(lam=1.0),0.96469,0.02294,+0.02338,10
+Breast Cancer,30,569,20,Semi(lam=5.0),0.95894,0.03174,+0.01763,10
+Breast Cancer,30,569,20,LearnedLambda,0.95287,0.01579,+0.01156,10
+Breast Cancer,30,569,20,LocalLambda(a=1),0.96525,0.02305,+0.02394,10
+Breast Cancer,30,569,20,LocalLambda(a=2),0.96613,0.02346,+0.02481,10
+Breast Cancer,30,569,40,Supervised,0.86869,0.04897,+0.00000,10
+Breast Cancer,30,569,40,Semi(lam=0.1),0.97256,0.02148,+0.10388,10
+Breast Cancer,30,569,40,Semi(lam=1.0),0.97131,0.01767,+0.10263,10
+Breast Cancer,30,569,40,Semi(lam=5.0),0.97081,0.01797,+0.10213,10
+Breast Cancer,30,569,40,LearnedLambda,0.95950,0.03416,+0.09081,10
+Breast Cancer,30,569,40,LocalLambda(a=1),0.97300,0.01753,+0.10431,10
+Breast Cancer,30,569,40,LocalLambda(a=2),0.97338,0.01790,+0.10469,10
+Breast Cancer,30,569,80,Supervised,0.96350,0.01742,+0.00000,10
+Breast Cancer,30,569,80,Semi(lam=0.1),0.97931,0.01437,+0.01581,10
+Breast Cancer,30,569,80,Semi(lam=1.0),0.97637,0.01812,+0.01287,10
+Breast Cancer,30,569,80,Semi(lam=5.0),0.97506,0.01974,+0.01156,10
+Breast Cancer,30,569,80,LearnedLambda,0.97994,0.01377,+0.01644,10
+Breast Cancer,30,569,80,LocalLambda(a=1),0.97644,0.01811,+0.01294,10
+Breast Cancer,30,569,80,LocalLambda(a=2),0.97631,0.01827,+0.01281,10
+Ionosphere,34,351,20,Supervised,0.93375,0.00963,+0.00000,10
+Ionosphere,34,351,20,Semi(lam=0.1),0.95488,0.02102,+0.02113,10
+Ionosphere,34,351,20,Semi(lam=1.0),0.95537,0.02697,+0.02163,10
+Ionosphere,34,351,20,Semi(lam=5.0),0.95312,0.02742,+0.01937,10
+Ionosphere,34,351,20,LearnedLambda,0.95294,0.02833,+0.01919,10
+Ionosphere,34,351,20,LocalLambda(a=1),0.95406,0.02707,+0.02031,10
+Ionosphere,34,351,20,LocalLambda(a=2),0.95413,0.02713,+0.02038,10
+Ionosphere,34,351,40,Supervised,0.93444,0.01259,+0.00000,10
+Ionosphere,34,351,40,Semi(lam=0.1),0.94913,0.03877,+0.01469,10
+Ionosphere,34,351,40,Semi(lam=1.0),0.95638,0.02706,+0.02194,10
+Ionosphere,34,351,40,Semi(lam=5.0),0.95600,0.02749,+0.02156,10
+Ionosphere,34,351,40,LearnedLambda,0.95619,0.02692,+0.02175,10
+Ionosphere,34,351,40,LocalLambda(a=1),0.95450,0.02953,+0.02006,10
+Ionosphere,34,351,40,LocalLambda(a=2),0.95469,0.02897,+0.02025,10
+Ionosphere,34,351,80,Supervised,0.82475,0.12633,+0.00000,10
+Ionosphere,34,351,80,Semi(lam=0.1),0.94950,0.02934,+0.12475,10
+Ionosphere,34,351,80,Semi(lam=1.0),0.95669,0.01160,+0.13194,10
+Ionosphere,34,351,80,Semi(lam=5.0),0.95700,0.01148,+0.13225,10
+Ionosphere,34,351,80,LearnedLambda,0.95206,0.02156,+0.12731,10
+Ionosphere,34,351,80,LocalLambda(a=1),0.95650,0.01166,+0.13175,10
+Ionosphere,34,351,80,LocalLambda(a=2),0.95650,0.01166,+0.13175,10
+Sonar,60,208,20,Supervised,0.92625,0.00000,+0.00000,10
+Sonar,60,208,20,Semi(lam=0.1),0.73806,0.16841,-0.18819,10
+Sonar,60,208,20,Semi(lam=1.0),0.70481,0.13184,-0.22144,10
+Sonar,60,208,20,Semi(lam=5.0),0.69906,0.13610,-0.22719,10
+Sonar,60,208,20,LearnedLambda,0.70481,0.13184,-0.22144,10
+Sonar,60,208,20,LocalLambda(a=1),0.70450,0.14730,-0.22175,10
+Sonar,60,208,20,LocalLambda(a=2),0.72888,0.15175,-0.19737,10
+Sonar,60,208,40,Supervised,0.92625,0.00000,+0.00000,10
+Sonar,60,208,40,Semi(lam=0.1),0.75894,0.12145,-0.16731,10
+Sonar,60,208,40,Semi(lam=1.0),0.74056,0.13103,-0.18569,10
+Sonar,60,208,40,Semi(lam=5.0),0.71881,0.14592,-0.20744,10
+Sonar,60,208,40,LearnedLambda,0.76744,0.13858,-0.15881,10
+Sonar,60,208,40,LocalLambda(a=1),0.74038,0.13014,-0.18587,10
+Sonar,60,208,40,LocalLambda(a=2),0.76038,0.12757,-0.16587,10
+Sonar,60,208,80,Supervised,0.93338,0.00825,+0.00000,10
+Sonar,60,208,80,Semi(lam=0.1),0.86588,0.10614,-0.06750,10
+Sonar,60,208,80,Semi(lam=1.0),0.78494,0.16007,-0.14844,10
+Sonar,60,208,80,Semi(lam=5.0),0.79175,0.14788,-0.14163,10
+Sonar,60,208,80,LearnedLambda,0.78494,0.16007,-0.14844,10
+Sonar,60,208,80,LocalLambda(a=1),0.78812,0.16264,-0.14525,10
+Sonar,60,208,80,LocalLambda(a=2),0.79506,0.16266,-0.13831,10
+Heart Disease,13,270,20,Supervised,0.93025,0.01774,+0.00000,10
+Heart Disease,13,270,20,Semi(lam=0.1),0.79044,0.12440,-0.13981,10
+Heart Disease,13,270,20,Semi(lam=1.0),0.76869,0.11626,-0.16156,10
+Heart Disease,13,270,20,Semi(lam=5.0),0.76019,0.12506,-0.17006,10
+Heart Disease,13,270,20,LearnedLambda,0.81244,0.14662,-0.11781,10
+Heart Disease,13,270,20,LocalLambda(a=1),0.77931,0.12105,-0.15094,10
+Heart Disease,13,270,20,LocalLambda(a=2),0.77663,0.12004,-0.15363,10
+Heart Disease,13,270,40,Supervised,0.78050,0.10633,+0.00000,10
+Heart Disease,13,270,40,Semi(lam=0.1),0.81706,0.09195,+0.03656,10
+Heart Disease,13,270,40,Semi(lam=1.0),0.87425,0.04721,+0.09375,10
+Heart Disease,13,270,40,Semi(lam=5.0),0.82975,0.09944,+0.04925,10
+Heart Disease,13,270,40,LearnedLambda,0.83131,0.09629,+0.05081,10
+Heart Disease,13,270,40,LocalLambda(a=1),0.87231,0.04903,+0.09181,10
+Heart Disease,13,270,40,LocalLambda(a=2),0.86244,0.06586,+0.08194,10
+Heart Disease,13,270,80,Supervised,0.83356,0.04081,+0.00000,10
+Heart Disease,13,270,80,Semi(lam=0.1),0.84588,0.04554,+0.01231,10
+Heart Disease,13,270,80,Semi(lam=1.0),0.86531,0.04570,+0.03175,10
+Heart Disease,13,270,80,Semi(lam=5.0),0.86450,0.04301,+0.03094,10
+Heart Disease,13,270,80,LearnedLambda,0.85300,0.04865,+0.01944,10
+Heart Disease,13,270,80,LocalLambda(a=1),0.86744,0.04826,+0.03387,10
+Heart Disease,13,270,80,LocalLambda(a=2),0.86756,0.04865,+0.03400,10

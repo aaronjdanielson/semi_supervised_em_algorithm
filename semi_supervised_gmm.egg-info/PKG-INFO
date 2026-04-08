@@ -1,3 +1,57 @@
+Metadata-Version: 2.4
+Name: semi-supervised-gmm
+Version: 0.1.0
+Summary: Semi-supervised Gaussian mixture classifier with a weighted unlabeled likelihood
+Author: The Authors
+License: MIT License
+        
+        Copyright (c) 2025 The Authors
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/the-authors/semi-supervised-gmm
+Project-URL: Documentation, https://github.com/the-authors/semi-supervised-gmm#readme
+Project-URL: Bug Tracker, https://github.com/the-authors/semi-supervised-gmm/issues
+Keywords: semi-supervised learning,gaussian mixture model,expectation maximization,classification,machine learning
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24
+Requires-Dist: scipy>=1.10
+Requires-Dist: scikit-learn>=1.3
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Provides-Extra: examples
+Requires-Dist: matplotlib>=3.5; extra == "examples"
+Dynamic: license-file
+
 # semi_supervised_gmm
 
 Semi-supervised Gaussian mixture classification with a weighted unlabeled likelihood.
@@ -24,19 +78,6 @@ The central contribution is treating `λ` as an object of study in its own right
 - **λ = 0** recovers purely supervised MLE.
 - **λ > 0** borrows geometric structure from the unlabeled distribution.
 - **Pre-fitting diagnostic** `A(0)`: a computable score whose sign predicts whether adding unlabeled data will improve or degrade the estimator — before any semi-supervised fitting is done.
-
----
-
-## Tutorial notebook
-
-An end-to-end walkthrough using `sklearn.datasets.load_breast_cancer()` (569 samples, 30 features):
-
-```bash
-jupyter notebook notebooks/tutorial.ipynb
-```
-
-Covers all four estimators, the λ path, the pre-fitting diagnostic, and a comparative AUROC summary.
-All plots use a dark theme consistent with the paper's visual style.
 
 ---
 
@@ -78,35 +119,6 @@ proba  = model.predict_proba(X_test)   # shape (n, 2): [P(y=0|x), P(y=1|x)]
 labels = model.predict(X_test)
 auc    = model.score(X_test, y_test)   # AUROC
 ```
-
----
-
-## Results
-
-![AUROC vs label budget](assets/auroc_vs_nlabeled.png)
-
-![Effect of λ on AUROC](assets/lambda_sweep.png)
-
-![Cross-dataset benchmark](assets/benchmark_delta_auroc.png)
-
-## Benchmark results
-
-AUROC averaged over 10 random seeds ± std. `covariance_type="ledoit_wolf"`, StandardScaler.  
-All four semi-supervised variants shown at N_labeled=40 (20 per class); Parkinsons at N_labeled=20 (15-per-class test due to small positive class).
-
-| Dataset | d | N | N_lab | Supervised | Semi (λ=1) | Learned-λ | Local-λ | Δ best |
-|---------|--:|--:|------:|:----------:|:----------:|:---------:|:-------:|:------:|
-| Breast Cancer | 30 | 569 | 40 | 0.869±0.049 | 0.971±0.018 | 0.960±0.034 | 0.973±0.018 | **+0.105** |
-| Ionosphere | 34 | 351 | 80 | 0.825±0.126 | 0.957±0.012 | 0.952±0.022 | 0.956±0.012 | **+0.132** |
-| Heart Disease | 13 | 270 | 40 | 0.780±0.106 | 0.874±0.047 | 0.831±0.096 | 0.872±0.049 | **+0.094** |
-| Parkinsons | 22 | 195 | 20 | 0.785±0.065 | 0.808±0.046 | 0.815±0.058 | 0.811±0.043 | +0.030 |
-| Sonar | 60 | 208 | 40 | 0.926±0.000 | 0.741±0.131 | 0.767±0.139 | 0.740±0.130 | −0.159 |
-
-**When it helps:** In the label-scarce regime (10–40 labeled samples per class), all three semi-supervised variants consistently improve AUROC by **+0.03 to +0.13** on datasets where the Gaussian mixture structure is reasonable (Breast Cancer, Ionosphere, Heart Disease). The choice of variant matters little — `Semi(λ=1)` and `Local-λ` are typically tied for best.
-
-**When it doesn't:** Sonar (d/N_per_class = 6) is the clear failure case. The feature-to-label ratio is far above the threshold identified in the paper's high-dimensional alignment analysis: unlabeled data estimate a 60-dimensional covariance that doesn't align with the labeled decision boundary, and `‖g₀‖` is large, correctly flagging the diagnostic as `"unreliable"`.
-
-**Stability bonus:** At Ionosphere N_labeled=80, the supervised estimator is highly variable (std=0.126); semi-supervised stabilises it to std=0.012 — a variance-reduction effect separate from the bias improvement.
 
 ---
 
